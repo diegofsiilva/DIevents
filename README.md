@@ -99,12 +99,12 @@ Acesse: [http://localhost:3000](http://localhost:3000)
 
 ```
 meu-projeto/
-├── assets/                  # Arquivos públicos (imagens, ícones)
+├── assets/                  # Arquivos públicos (imagens)
 │   ├── favicon.ico
-│   ├── modele-banco.png
+│   ├── modelo-banco.png
 │   └── mvc-diagram.png
 ├── config/                  # Configurações do sistema
-│   └── db.js
+│   └── database.js
 ├── controllers/             # Controladores (lógica das rotas)
 │   ├── alunoController.js
 │   ├── cursoController.js
