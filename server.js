@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const db = require('./config/db');
+const db = require('./config/database');
 const path = require('path');
 
 app.set('view engine', 'ejs');
@@ -38,3 +38,21 @@ db.connect()
   .catch(err => {
     console.error('Erro ao conectar ao banco de dados:', err);
   });
+
+
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const routes = require('./routes');
+
+const port = 3001;
+
+// Middlewares
+app.use(cors());
+app.use(bodyParser.json());
+
+// Usando as rotas definidas
+app.use('/api', routes);
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
