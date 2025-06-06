@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+
+<section class="event-details-section">
+    <div class="event-header">
+        <h2><%= event.title %></h2>
+        <a href="/events" class="btn btn-secondary">Voltar para Lista</a>
+    </div>
+    
+    <div class="event-info">
+        <div class="event-info-item">
+            <h3>Data</h3>
+            <p><%= event.date %></p>
+        </div>
+        
+        <div class="event-info-item">
+            <h3>Local</h3>
+            <p><%= event.location %></p>
+        </div>
+        
+        <div class="event-info-item">
+            <h3>Organizador</h3>
+            <p><%= event.organizer %></p>
+        </div>
+    </div>
+    
+    <div class="event-description">
+        <h3>Descrição</h3>
+        <p><%= event.description %></p>
+    </div>
+    
+    <div class="event-actions">
+        <button class="btn btn-primary">Inscrever-se</button>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>
+

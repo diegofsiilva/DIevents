@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<section class="events-section">
+    <h2>Lista de Eventos</h2>
+    
+    <% if (events && events.length > 0) { %>
+        <div class="events-list">
+            <% events.forEach(event => { %>
+                <div class="event-item">
+                    <h3><%= event.title %></h3>
+                    <div class="event-details">
+                        <p class="event-date"><strong>Data:</strong> <%= event.date %></p>
+                        <p class="event-location"><strong>Local:</strong> <%= event.location %></p>
+                    </div>
+                    <a href="/events/<%= event.id %>" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <p>Nenhum evento encontrado.</p>
+    <% } %>
+</section>
+
+<%- include('../partials/footer') %>
+
